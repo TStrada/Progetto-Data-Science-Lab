@@ -133,16 +133,24 @@ I modelli selezionati ed utilizzati all'interno del progetto sono i seguenti: AR
 Di seguito osserviamo i modelli in modo più approfondito da un punto di vista teorico.
 
 \subsection*{ARIMA}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+In statistica per modello ARIMA (acronimo di AutoRegressive Integrated Moving Average) si intende una particolare tipologia di modelli atti ad indagare serie storiche che presentano caratteristiche particolari. Fa parte della famiglia dei processi lineari non stazionari.\\
+Un modello ARIMA(p,d,q) deriva da un modello ARMA(p,q) a cui sono state applicate le differenze di ordine d per renderlo stazionario. In caso di stagionalità nei dati si parla di modelli SARIMA o ARIMA(p,d,q)(P,D,Q).\\
+Dunque, il modello ARIMA nasce aggiungendo l'integrazione (I) alla combinazione dei modelli autoregressivo (AR) e a media mobile (MA). Il modello ARIMA è composto dalle seguenti componenti:
 
 \begin{description}
-	\item[First] This is the first item
-	\item[Last] This is the last item
+	\item[P] l'ordine della componente autoregressiva
+	\item[D] grado della differenziazione
+	\item[Q] ordine della componente a media mobile
 \end{description}
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+
+An integrated ARMA model of order d is a stochastic process that becomes stationary after differentiating it d times.\\
+\\
+$\Phi (B) (I - B)^d Y_t = \psi (B) \epsilon_t$
+
+
 
 \subsection*{TBATS}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+Il modello TBATS è in grado di considerare e lavorare con stagionalità multiple e complesse.
 
 \begin{description}
 	\item[First] This is the first item
@@ -151,7 +159,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
 
 \subsection*{PROPHET}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+Prophet è invece una procedura dedita alla previsione di serie storiche basata su modelli addittivi, dove i trend non lineari sono analizzati con diverse stagionalità.\\
+Il modello decompone la serie storica in trend, stagionalità e festività.
 
 \begin{description}
 	\item[First] This is the first item
