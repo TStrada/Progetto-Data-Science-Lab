@@ -22,7 +22,7 @@ m <- prophet(train,interval.width=0.95,daily.seasonality=TRUE, n.changepoints = 
 m
 m$changepoints
 
-future <- make_future_dataframe(m, periods = 90)
+future <- make_future_dataframe(m, periods = 365)
 tail(future)
 
 forecast <- predict(m, future)
