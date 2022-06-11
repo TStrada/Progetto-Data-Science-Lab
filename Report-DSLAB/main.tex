@@ -37,9 +37,9 @@
 \title{Data Science Lab: Vendite E-commerce} % The article title
 
 \author{
-	Davide Abete x\\
+    Ruben Agazzi x\\
 	Fabrizio Cominetti x\\
-	Ruben Agazzi x\\
+	Davide Abete x\\
 	Tommaso Strada x\\
 	Alessandro Fasani x % Authors
 }
@@ -115,21 +115,6 @@ Periodo\\
 Realizzazione di dashboard\\
 Destinatari del progetto.
 
-\begin{table}
-\caption{Random table}
-\centering
-	\begin{tabular}{llr}
-		\toprule
-		\multicolumn{2}{c}{Name} \\
-		\cmidrule(r){1-2}
-			First name & Last Name & Grade \\
-		\midrule
-			John & Doe & $7.5$ \\
-			Richard & Miles & $2$ \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
 \section{Aspetti Metodologici}
 I modelli selezionati ed utilizzati all'interno del progetto sono i seguenti: ARIMA, TBATS, PROPHET, XGBOOST.\\
 Di seguito osserviamo i modelli in modo più approfondito da un punto di vista teorico.
@@ -193,9 +178,9 @@ dove:
 	\item[e(t)] covers idiosyncratic changes not accommodated by the model
 \end{description}
 \cite{mathprophet}\cite{fbprophet}
-
-In other words, the procedure’s equation can be written:
-\includegraphics{prophet.png}
+\\
+In other words, the procedure\’s equation can be written:
+\includegraphics[width=75mm,scale=0.5]{prophet.png}
 \\
 Prophet is essentially “framing the forecasting problem as a curve-fitting exercise” rather than looking explicitly at the time based dependence of each observation.\\
 The procedure provides two possible trend models for g(t), “a saturating growth model, and a piecewise linear model.”\\
@@ -207,8 +192,8 @@ Impact of a particular holiday on the time series is often similar year after ye
 XGBoost is an efficient implementation of gradient boosting for classification and regression problems.\\
 XGBoost can also be used for time series forecasting, although it requires that the time series dataset be transformed into a supervised learning problem first. It also requires the use of a specialized technique for evaluating the model called walk-forward validation, as evaluating the model using k-fold cross validation would result in optimistically biased results.\\
 \\
-XGBRegressor uses a number of gradient boosted trees (referred to as n_estimators in the model) to predict the value of a dependent variable. This is done through combining decision trees (which individually are weak learners) to form a combined strong learner.\\
-When forecasting a time series, the model uses what is known as a lookback period to forecast for a number of steps forward. For instance, if a lookback period of 1 is used, then the X_train (or independent variable) uses lagged values of the time series regressed against the time series at time t (Y_train) in order to forecast future values.\\
+XGBRegressor uses a number of gradient boosted trees (referred to as n\_estimators in the model) to predict the value of a dependent variable. This is done through combining decision trees (which individually are weak learners) to form a combined strong learner.\\
+When forecasting a time series, the model uses what is known as a lookback period to forecast for a number of steps forward. For instance, if a lookback period of 1 is used, then the X\_train (or independent variable) uses lagged values of the time series regressed against the time series at time t (Y\_train) in order to forecast future values.\\
 \cite{xgboost}
 
 \begin{description}
@@ -242,7 +227,36 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
 
 \section{Risultati}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+Al fine di valutare e selezionare il modello più indicato e preciso relativamente alle finalità del progetto, si è scelto di utilizzare una metrica, 'MAPE', in grado di tener conto anche dell'errore di previsione.\\
+Di seguito il MAPE (Mean Absolute Percentage Error), o errore percentuale medio assoluto, dal punto di vista teorico:\\
+\includegraphics[width=75mm,scale=0.5]{mape.png}
+\\
+dove:
+\begin{description}
+	\item[$A_t$] sono i valori reali
+	\item[$F_t$] sono i valori predetti
+	\item[n] rappresenta il numero di osservazioni
+\end{description}
+
+La metrica MAPE consiste nella media aritmetica dei rapporti tra il valore assoluto degli errori di previsione e la domanda che si è effettivamente verificata.\\
+Illustriamo di seguito i valori della metrica considerata per ciascuno dei modelli testati.
+
+\begin{table}
+\caption{MAPE}
+\centering
+	\begin{tabular}{lllr}
+		\toprule
+		\multicolumn{4}{c}{MAPE} \\
+		\cmidrule(r){2-4}
+			Modello & Pesca & Calcio & X \\
+		\midrule
+			ARIMA & X\% & X\% & X\% \\
+			TBATS & X\% & X\% & X\% \\
+			PROPHET & X\% & X\% & X\% \\
+			XGBOOST & X\% & X\% & X\% \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \section{Dashboard}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
