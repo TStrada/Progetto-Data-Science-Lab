@@ -60,7 +60,7 @@
 \twocolumn[
   \begin{@twocolumnfalse}
     \maketitle
-    \begin{abstract}\\
+    \begin{abstract}
       \noindent{L'obiettivo principale del progetto è quello di valutare e selezionare il miglior modello predittivo relativamente alle stime delle vendite di alcuni settori, precisamente Pesca, Calcio e x, di un attività di e-commerce.}\\
       Il periodo preso in considerazione va dal giorno x al giorno x.\\
       Per un attività commerciale presente sulla rete è di fondamentale importanza prevedere le vendite che saranno effettuate nei periodi successivi per ogni settore a disposizione, in modo tale da organizzare disponibilità di magazzino e di spedizione.\\
@@ -68,8 +68,8 @@
       Come sarà possibile verificare nel proseguio del report, la granularità più efficace, relativamente agli obiettivi preposti dal progetto, è risultata quella x.\\
       Il progetto è stato effettuato prendendo in considerazione i tre settori con maggiore disponibilità effettiva di osservazioni, ma i modelli utilizzati possono essere applicati anche ad altri settori, per realizzare in questo modo una panoramica completo sull'intero e-commerce.
     \end{abstract}
-  \end{@twocolumnfalse}
-]
+  \end{@twocolumnfalse}]
+
 \bigskip
 
 \clearpage
@@ -123,7 +123,6 @@ Di seguito osserviamo i modelli in modo più approfondito da un punto di vista t
 In statistica per modello ARIMA (acronimo di AutoRegressive Integrated Moving Average) si intende una particolare tipologia di modelli atti ad indagare serie storiche che presentano caratteristiche particolari. Fa parte della famiglia dei processi lineari non stazionari.\\
 Un modello ARIMA(p,d,q) deriva da un modello ARMA(p,q) a cui sono state applicate le differenze di ordine d per renderlo stazionario. In caso di stagionalità nei dati si parla di modelli SARIMA o ARIMA(p,d,q)(P,D,Q).\\
 Dunque, il modello ARIMA nasce aggiungendo l'integrazione (I) alla combinazione dei modelli autoregressivo (AR) e a media mobile (MA). Il modello ARIMA è composto dalle seguenti componenti:
-
 \begin{description}
 	\item[P] l'ordine della componente autoregressiva
 	\item[D] grado della differenziazione
@@ -134,13 +133,18 @@ An integrated ARMA model of order d is a stochastic process that becomes station
 \\
 $modello$\\
 \\
-Dove:
-\begin{description}
-	\item[x] x
-	\item[x] x
-	\item[x] x
-\end{description}
-
+We created 4 different models, in order to forecast yearly and trimestral data for fishing and for football sales. The models p, q and d parameters are found by minimizing model AIC. We obtained the following models:
+% \begin{description}
+% 	\item[x] x
+% 	\item[x] x
+% 	\item[x] x
+% \end{description}
+\begin{itemize}
+	\item Yearly fishing: ARIMA model (0,0,0)(0,0,0)
+	\item Yearly football: ARIMA model (0,1,0)(0,0,0)
+	\item Trimestral fishing: SARIMA model (0,2,0)(1,0,0)
+	\item Trimestral football: SARIMA model (0,0,1)(1,1,0)
+\end{itemize}
 \subsection*{TBATS}
 Il modello TBATS è in grado di considerare e lavorare con stagionalità multiple e complesse.
 
@@ -179,7 +183,7 @@ dove:
 \end{description}
 \cite{mathprophet}\cite{fbprophet}
 \\
-In other words, the procedure\’s equation can be written:
+In other words, the procedure's equation can be written:
 \includegraphics[width=75mm,scale=0.5]{prophet.png}
 \\
 Prophet is essentially “framing the forecasting problem as a curve-fitting exercise” rather than looking explicitly at the time based dependence of each observation.\\
@@ -250,7 +254,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 		\cmidrule(r){2-4}
 			Modello & Pesca & Calcio & X \\
 		\midrule
-			ARIMA & X\% & X\% & X\% \\
+			ARIMA & 12.45\% & 28.5\% & X\% \\
 			TBATS & X\% & X\% & X\% \\
 			PROPHET & X\% & X\% & X\% \\
 			XGBOOST & X\% & X\% & X\% \\
