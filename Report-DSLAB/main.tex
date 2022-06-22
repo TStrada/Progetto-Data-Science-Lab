@@ -85,7 +85,7 @@
 La realizzazione di questo progetto ha visto come obiettivo principale quello di testare, valutare e decretare il miglior modello predittivo al fine di stimare le vendite in euro realizzate dai vari settori all'interno di un e-commerce.\\
 Prima di tutto, i dati sono stati pre-processati e 'puliti', in modo tale da renderli efficaci e ottimali rispetto allo scopo del progetto. I modelli predittivi, infatti, richiedevano un certo tipo di modellazione dei dati in input per utilizzarli al proprio interno e produrre delle previsioni.\\
 Una volta effettuato il pre-processing dei dati, il focus è passato sul test dei vari modelli, ognuno con le diverse granularità scelte in fase di programmazione.\\
-x\\
+Lorem ipsum dolor sit amet %(vedi report esempio)\\
 Periodo scelto e caratteristiche periodo temporale.
 
 \subsection{Punti Principali}
@@ -119,7 +119,7 @@ Destinatari del progetto.
 I modelli selezionati ed utilizzati all'interno del progetto sono i seguenti: ARIMA, TBATS, PROPHET, XGBOOST.\\
 Di seguito osserviamo i modelli in modo più approfondito da un punto di vista teorico.
 
-\subsection*{ARIMA}
+\subsection{ARIMA}
 In statistica per modello ARIMA (acronimo di AutoRegressive Integrated Moving Average) si intende una particolare tipologia di modelli atti ad indagare serie storiche che presentano caratteristiche particolari. Fa parte della famiglia dei processi lineari non stazionari.\\
 Un modello ARIMA(p,d,q) deriva da un modello ARMA(p,q) a cui sono state applicate le differenze di ordine d per renderlo stazionario. In caso di stagionalità nei dati si parla di modelli SARIMA o ARIMA(p,d,q)(P,D,Q).\\
 Dunque, il modello ARIMA nasce aggiungendo l'integrazione (I) alla combinazione dei modelli autoregressivo (AR) e a media mobile (MA). Il modello ARIMA è composto dalle seguenti componenti:
@@ -151,7 +151,8 @@ I modelli ottenuti e i loro parametri sono i seguenti:
 	\item Mensile casual: SARIMA model (2,1,4)(1,0,0)
 	\item Settimanale casual: ARIMA model (1,0,0)(0,0,0)
 \end{itemize}
-\subsection*{TBATS}
+
+\subsection{TBATS}
 Il modello TBATS è in grado di considerare e lavorare con stagionalità multiple e complesse.\\
 TBATS è l'acronimo di Trigonometric seasonality, Box-Cox transformation, ARMA errors, Trend and Seasonal components.\\
 In questo modello, ogni stagionalità è modellata su di una rappresentazione trigonometrica, basata sulla serie di Fourier. Uno dei principali vantaggi di questo approccio è che richiede solo due 'seed', indipendentemente dalla lunghezza del periodo. Un altro vantaggio è la possibilità di modellare effetti stagionali di lunghezza non intera. Ad esempio, data una serie di osservazioni giornaliere, è possibile modellare gli anni bisestili con una stagione di lunghezza 365,25.\\
@@ -165,23 +166,23 @@ Il modello TBATS prende in considerazione varie alternative ed è in grado di ad
 \item varie quantità di armoniche utilizzate per modellare gli effetti stagionali
 \end{itemize}
 Il modello finale sarà poi scelto utilizzando il criterio di informazione di Akaike (AIC).\\
-Nella figura sottostante possiamo osservare una formulazione matematica del modello in questione.
+Nella figura sottostante possiamo osservare due formulazioni matematiche del modello in questione.
 
 \begin{figure}
-  \caption{Immagine da dispensa}
+  \caption{Dispensa}
   \begin{center}
     \includegraphics{tbats.png}
   \end{center}
 \end{figure}
 
 \begin{figure}
-  \caption{Immagine da report}
+  \caption{\protect\cite{tbats}}
   \begin{center}
     \includegraphics{tbats2.png}
   \end{center}
 \end{figure}
 
-\subsection*{PROPHET}
+\subsection{PROPHET}
 Prophet è invece una procedura dedita alla previsione di serie storiche basata su modelli addittivi, dove i trend non lineari sono analizzati con diverse stagionalità.\\
 Il modello decompone la serie storica in trend, stagionalità e festività.
 
@@ -206,7 +207,12 @@ dove:
 \cite{mathprophet}\cite{fbprophet}
 \\
 In other words, the procedure's equation can be written:
-\includegraphics[width=75mm,scale=0.5]{prophet.png}
+\begin{figure}
+  \caption{}
+  \begin{center}
+    \includegraphics[width=75mm,scale=0.5]{prophet.png}
+  \end{center}
+\end{figure}
 \\
 Prophet is essentially “framing the forecasting problem as a curve-fitting exercise” rather than looking explicitly at the time based dependence of each observation.\\
 The procedure provides two possible trend models for g(t), “a saturating growth model, and a piecewise linear model.”\\
@@ -214,7 +220,7 @@ The seasonal component s(t) provides a adaptability to the model by allowing per
 Prophet relies on Fourier series to provide a malleable model of periodic effects. P is the regular period the time series will have (e.g. P = 365.25 for yearly data or P = 7 for weekly data, when time is scaled in days).\\
 Impact of a particular holiday on the time series is often similar year after year, making it an important incorporation into the forecast. The component h(t) speaks for predictable events of the year including those on irregular schedules (e.g. Black Friday or the Superbowl). To utilize this feature, the user needs to provide a custom list of events. Fusing this list of holidays into the model is made straightforward by assuming that the effects of holidays are independent.\\
 
-\subsection*{XGBOOST}
+\subsection{XGBOOST}
 XGBoost is an efficient implementation of gradient boosting for classification and regression problems.\\
 XGBoost can also be used for time series forecasting, although it requires that the time series dataset be transformed into a supervised learning problem first. It also requires the use of a specialized technique for evaluating the model called walk-forward validation, as evaluating the model using k-fold cross validation would result in optimistically biased results.\\
 \\
@@ -351,6 +357,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 	\end{bmatrix}
 \end{align}
 
+\nocite{*} %aggiunge a bibliografia gli elementi non citati nel testo
 \printbibliography[title={Bibliografia}] %Prints bibliography
 
 \end{document}

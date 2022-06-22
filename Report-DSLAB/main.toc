@@ -5,6 +5,10 @@
 \contentsline {subsection}{\numberline {1.1}Punti Principali}{2}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Obiettivo}{2}{section.2}%
 \contentsline {section}{\numberline {3}Aspetti Metodologici}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ARIMA}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}TBATS}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}PROPHET}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}XGBOOST}{5}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Dati}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Manipolazione Dati}{6}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Analisi Pesca}{6}{section.5}%
