@@ -128,22 +128,28 @@ Dunque, il modello ARIMA nasce aggiungendo l'integrazione (I) alla combinazione 
 	\item[D] grado della differenziazione
 	\item[Q] ordine della componente a media mobile
 \end{description}
+Siccome, appunto, un modello ARIMA integra la componente autoregressiva e di media mobile di una serie storica, può essere così definito:
+\[
+(1 - \sum_{i=1}^{p'}\alpha_iL^i)X_t = (1+\sum_{i=1}^{q}\theta_iL^i)	
+\]
+ Un modello integrato ARMA di ordine d è un processo stocastico che diventa stazionario dopo essere differenziato d volte.\\
 
-An integrated ARMA model of order d is a stochastic process that becomes stationary after differentiating it d times.\\
-\\
-$modello$\\
-\\
-We created 4 different models, in order to forecast yearly and trimestral data for fishing and for football sales. The models p, q and d parameters are found by minimizing model AIC. We obtained the following models:
-% \begin{description}
-% 	\item[x] x
-% 	\item[x] x
-% 	\item[x] x
-% \end{description}
+Abbiamo creato 12 diversi modelli, in modo da predire i valori settimanali, mensili, trimestrali e annuali dei 3 settori di vendita selezionati, ovver calcio, pesca e casual. I parametri dei modelli ARIMA e SARIMA sono trovati minimizzando l'AIC.
+
+I modelli ottenuti e i loro parametri sono i seguenti:
 \begin{itemize}
-	\item Yearly fishing: ARIMA model (0,0,0)(0,0,0)
-	\item Yearly football: ARIMA model (0,1,0)(0,0,0)
-	\item Trimestral fishing: SARIMA model (0,2,0)(1,0,0)
-	\item Trimestral football: SARIMA model (0,0,1)(1,1,0)
+	\item Annuale pesca: ARIMA model (0,0,0)(0,0,0)
+	\item Trimestrale pesca: SARIMA model (0,2,0)(1,0,0)
+	\item Mensile pesca: SARIMA model (1,1,2)(1,0,0)
+	\item Settimanale pesca: SARIMA model (2,1,2)(1,0,0)
+	\item Annuale calcio: ARIMA model (0,1,0)(0,0,0)
+	\item  Trimestrale calcio: SARIMA model (1,0,0)(1,1,0)
+	\item Mensile calcio: SARIMA model (1,0,1)(0,0,2)
+	\item Settimanale calsio: SARIMA model (1,0,0)(2,0,0)
+	\item Annuale casual: ARIMA model (1,1,1)
+	\item Trimestrale casual: SARIMA model (2,2,0)(0,0,1)
+	\item Mensile casual: SARIMA model (2,1,4)(1,0,0)
+	\item Settimanale casual: ARIMA model (1,0,0)(0,0,0)
 \end{itemize}
 \subsection*{TBATS}
 Il modello TBATS è in grado di considerare e lavorare con stagionalità multiple e complesse.
@@ -222,7 +228,7 @@ I dati a disposizione coprono il periodo compreso tra il 2 febbraio 2013 e l'8 a
 Il file iniziale è composto da un totale di 25262 righe e dalle 3 colonne descritte sopra.
 
 \subsection{Manipolazione Dati}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+Durante la fase iniziale di esplorazione dei dati, abbiamo notato la presenza di molti valori mancanti all'interno del dataset; in particolare la maggior parte di questi valori appartenevano all'anno 2013. In questo caso abbiamo deciso di rimuovere completamente l'anno in questione in modo da avere dati continui sugli anni precedenti, evitando di allenare i modelli su dati frammentati e incompleti.
 
 \section{Analisi Pesca}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
@@ -245,16 +251,16 @@ dove:
 La metrica MAPE consiste nella media aritmetica dei rapporti tra il valore assoluto degli errori di previsione e la domanda che si è effettivamente verificata.\\
 Illustriamo di seguito i valori della metrica considerata per ciascuno dei modelli testati.
 
-\begin{table}
-\caption{MAPE}
+\begin{table}[H]
+\caption{MAPE dati annuali}
 \centering
 	\begin{tabular}{lllr}
 		\toprule
 		\multicolumn{4}{c}{MAPE} \\
 		\cmidrule(r){2-4}
-			Modello & Pesca & Calcio & X \\
+			Modello & Pesca & Calcio & Casual \\
 		\midrule
-			ARIMA & 12.45\% & 28.5\% & X\% \\
+			ARIMA & 171.49\% & 261.70\% & 301.28\% \\
 			TBATS & X\% & X\% & X\% \\
 			PROPHET & X\% & X\% & X\% \\
 			XGBOOST & X\% & X\% & X\% \\
@@ -262,6 +268,55 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 	\end{tabular}
 \end{table}
 
+\begin{table}[H]
+	\caption{MAPE dati trimestrali}
+	\centering
+		\begin{tabular}{lllr}
+			\toprule
+			\multicolumn{4}{c}{MAPE} \\
+			\cmidrule(r){2-4}
+				Modello & Pesca & Calcio & Casual \\
+			\midrule
+				ARIMA & 319.69\% & 78.89\% & 327.05\% \\
+				TBATS & X\% & X\% & X\% \\
+				PROPHET & X\% & X\% & X\% \\
+				XGBOOST & X\% & X\% & X\% \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[H]
+		\caption{MAPE dati mensili}
+		\centering
+			\begin{tabular}{lllr}
+				\toprule
+				\multicolumn{4}{c}{MAPE} \\
+				\cmidrule(r){2-4}
+					Modello & Pesca & Calcio & Casual \\
+				\midrule
+					ARIMA & 62.7\% & 111.44\% & 222.02\% \\
+					TBATS & X\% & X\% & X\% \\
+					PROPHET & X\% & X\% & X\% \\
+					XGBOOST & X\% & X\% & X\% \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\caption{MAPE dati settimanali}
+			\centering
+				\begin{tabular}{lllr}
+					\toprule
+					\multicolumn{4}{c}{MAPE} \\
+					\cmidrule(r){2-4}
+						Modello & Pesca & Calcio & Casual \\
+					\midrule
+						ARIMA & 31.87\% & 571.40\% & 145.57\% \\
+						TBATS & X\% & X\% & X\% \\
+						PROPHET & X\% & X\% & X\% \\
+						XGBOOST & X\% & X\% & X\% \\
+					\bottomrule
+				\end{tabular}
+			\end{table}
 \section{Dashboard}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
 

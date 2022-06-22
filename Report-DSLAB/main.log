@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2022.1.10)  15 JUN 2022 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2022.1.10)  22 JUN 2022 15:29
 entering extended mode
 **f:/universita/DataScience/DSLab/Progetto-Data-Science-Lab/Report-DSLAB/main.tex
 (f:/universita/DataScience/DSLab/Progetto-Data-Science-Lab/Report-DSLAB/main.tex
@@ -1364,57 +1364,77 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 132--143
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--143
-
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[]\T1/XCharter-TLF/m/n/12 (+20) Annuale pe-sca: ARI-MA mo-del
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 132--143
-\T1/XCharter-TLF/m/n/12 (+20) We crea-ted 4 dif-fe-rent mo-dels, in or-der
- []
-
-
-Underfull \hbox (badness 4429) in paragraph at lines 132--143
-\T1/XCharter-TLF/m/n/12 (+20) mo-del AIC. We ob-tai-ned the fol-lo-wing
+Underfull \hbox (badness 6412) in paragraph at lines 142--143
+[]\T1/XCharter-TLF/m/n/12 (+20) Trimestrale pe-sca: SA-RI-MA mo-del
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 143--144
-[]\T1/XCharter-TLF/m/n/12 (+20) Yearly fi-shing: ARI-MA mo-del
+[]\T1/XCharter-TLF/m/n/12 (+20) Mensile pe-sca: SA-RI-MA mo-del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-[]\T1/XCharter-TLF/m/n/12 (+20) Yearly foot-ball: ARI-MA mo-del
+Underfull \hbox (badness 4353) in paragraph at lines 144--145
+[]\T1/XCharter-TLF/m/n/12 (+20) Settimanale pe-sca: SA-RI-MA mo-del
  []
 
 
-Underfull \hbox (badness 6204) in paragraph at lines 145--146
-[]\T1/XCharter-TLF/m/n/12 (+20) Trimestral fi-shing: SA-RI-MA mo-del
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[]\T1/XCharter-TLF/m/n/12 (+20) Annuale cal-cio: ARI-MA mo-del
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 146--147
-[]\T1/XCharter-TLF/m/n/12 (+20) Trimestral foot-ball: SA-RI-MA mo-del
+Underfull \hbox (badness 5893) in paragraph at lines 146--147
+[]\T1/XCharter-TLF/m/n/12 (+20) Trimestrale cal-cio: SA-RI-MA mo-del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[]\T1/XCharter-TLF/m/n/12 (+20) Mensile cal-cio: SA-RI-MA mo-del
+ []
+
+
+Underfull \hbox (badness 4205) in paragraph at lines 148--149
+[]\T1/XCharter-TLF/m/n/12 (+20) Settimanale cal-sio: SA-RI-MA mo-del
+ []
+
+
+Underfull \hbox (badness 4205) in paragraph at lines 150--151
+[]\T1/XCharter-TLF/m/n/12 (+20) Trimestrale ca-sual: SA-RI-MA mo-del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]\T1/XCharter-TLF/m/n/12 (+20) Mensile ca-sual: SA-RI-MA mo-del
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 152--153
+[]\T1/XCharter-TLF/m/n/12 (+20) Settimanale ca-sual: ARI-MA mo-del
  []
 
 <./Immagini//tbats.png, id=76, 348.30125pt x 146.04562pt>
 File: ./Immagini//tbats.png Graphic file (type png)
 <use ./Immagini//tbats.png>
-Package pdftex.def Info: ./Immagini//tbats.png  used on input line 151.
+Package pdftex.def Info: ./Immagini//tbats.png  used on input line 157.
 (pdftex.def)             Requested size: 348.3004pt x 146.04524pt.
 <./Immagini//tbats2.png, id=78, 179.67125pt x 221.82875pt>
 File: ./Immagini//tbats2.png Graphic file (type png)
 <use ./Immagini//tbats2.png>
-Package pdftex.def Info: ./Immagini//tbats2.png  used on input line 154.
+Package pdftex.def Info: ./Immagini//tbats2.png  used on input line 160.
 (pdftex.def)             Requested size: 179.67079pt x 221.82819pt.
 
-Overfull \hbox (128.16031pt too wide) in paragraph at lines 151--155
+Overfull \hbox (128.16031pt too wide) in paragraph at lines 157--161
 [][] 
  []
 
@@ -1425,63 +1445,70 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3 <./Immagini//tbats.png> <./Immagini//tbats2.png>]
-Underfull \hbox (badness 1997) in paragraph at lines 170--179
+[3 <./Immagini//tbats.png>]
+Underfull \hbox (badness 1997) in paragraph at lines 176--185
 \T1/XCharter-TLF/m/n/12 (+20) Similar to a ge-ne-ra-li-zed ad-di-ti-ve mo-del
  []
 
-<./Immagini//prophet.png, id=91, 400.49625pt x 168.63pt>
+<./Immagini//prophet.png, id=96, 400.49625pt x 168.63pt>
 File: ./Immagini//prophet.png Graphic file (type png)
 <use ./Immagini//prophet.png>
-Package pdftex.def Info: ./Immagini//prophet.png  used on input line 187.
+Package pdftex.def Info: ./Immagini//prophet.png  used on input line 193.
 (pdftex.def)             Requested size: 200.24763pt x 84.31479pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--194
+Underfull \hbox (badness 10000) in paragraph at lines 190--200
 \T1/XCharter-TLF/m/n/12 (+20) In other words, the pro-ce-du-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--194
+Underfull \hbox (badness 10000) in paragraph at lines 190--200
 \T1/XCharter-TLF/m/n/12 (+20) re's equa-tion can be writ-ten:
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 184--194
+Underfull \hbox (badness 1584) in paragraph at lines 190--200
 \T1/XCharter-TLF/m/n/12 (+20) The sea-so-nal com-po-nent s(t) pro-vi-des a
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 184--194
+Underfull \hbox (badness 5274) in paragraph at lines 190--200
 \T1/XCharter-TLF/m/n/12 (+20) it an im-por-tant in-cor-po-ra-tion in-to the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--194
+Underfull \hbox (badness 10000) in paragraph at lines 190--200
 
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 196--202
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4 <./Immagini//tbats2.png> <./Immagini//prophet.png (PNG copy)>]
+Underfull \hbox (badness 5652) in paragraph at lines 202--208
 \T1/XCharter-TLF/m/n/12 (+20) XGBoost is an ef-fi-cient im-ple-men-ta-tion
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 196--202
+Underfull \hbox (badness 5622) in paragraph at lines 202--208
 \T1/XCharter-TLF/m/n/12 (+20) k-fold cross va-li-da-tion would re-sult in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--202
+Underfull \hbox (badness 10000) in paragraph at lines 202--208
 
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 196--202
+Underfull \hbox (badness 1173) in paragraph at lines 202--208
 \T1/XCharter-TLF/m/n/12 (+20) in the mo-del) to pre-dict the va-lue of a
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 196--202
+Underfull \hbox (badness 2401) in paragraph at lines 202--208
 \T1/XCharter-TLF/m/n/12 (+20) used, then the X_train (or in-de-pen-dent
  []
 
@@ -1492,22 +1519,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4 <./Immagini//prophet.png (PNG copy)>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [5]
-<./Immagini//mape.png, id=110, 451.6875pt x 138.5175pt>
+<./Immagini//mape.png, id=114, 451.6875pt x 138.5175pt>
 File: ./Immagini//mape.png Graphic file (type png)
 <use ./Immagini//mape.png>
-Package pdftex.def Info: ./Immagini//mape.png  used on input line 236.
+Package pdftex.def Info: ./Immagini//mape.png  used on input line 242.
 (pdftex.def)             Requested size: 225.84319pt x 69.25858pt.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 249.
+(Font)              scaled to size 10.95pt on input line 255.
+
+Overfull \hbox (10.54599pt too wide) in paragraph at lines 257--269
+ [][] 
+ []
+
+
+Overfull \hbox (3.874pt too wide) in paragraph at lines 274--286
+ [][] 
+ []
+
+
+Underfull \vbox (badness 7925) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1517,8 +1549,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6 <./Immagini//mape.png>]
+Overfull \hbox (3.874pt too wide) in paragraph at lines 307--319
+ [][] 
+ []
+
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 279.
+(Font)              scaled to size 12.0pt on input line 334.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/XCharter-TLF/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1527,7 +1563,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 2469) in paragraph at lines 279--279
+Underfull \hbox (badness 2469) in paragraph at lines 334--334
 \T1/XCharter-TLF/m/it/12 (+20) st for Ti-me Se-ries Fo-re-ca-sting\T1/XCharter-TLF/m/n/12 (+20) . \T1/XCharter-TLF/m/sc/12 (+20) url\T1/XCharter-TLF/m/n/12 (+20) :
  []
 
@@ -1540,9 +1576,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7
-
-] (main.aux)
+[7] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8A6431FBE494E63822D70233D18FB52B;1193.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1550,17 +1584,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25712 strings out of 479321
- 433058 string characters out of 2866501
- 1272582 words of memory out of 3000000
- 42479 multiletter control sequences out of 15000+600000
- 513723 words of font info for 208 fonts, out of 8000000 for 9000
+ 25713 strings out of 479321
+ 433036 string characters out of 2866501
+ 1275582 words of memory out of 3000000
+ 42480 multiletter control sequences out of 15000+600000
+ 513394 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,14n,78p,931b,2353s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Ruben\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk>{C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_yelf2i.enc}{C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch1_co4ru4.enc}{C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_rydp4l.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Italic.pfb><C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on f:/universita\DataScience\DSLab\Progetto-Data-Science-Lab\Report-DSLAB\main.pdf (7 pages, 411488 bytes).
+ <C:\Users\Ruben\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk>{C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_yelf2i.enc}{C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch1_co4ru4.enc}{C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_rydp4l.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Italic.pfb><C:/Users/Ruben/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on f:/universita\DataScience\DSLab\Progetto-Data-Science-Lab\Report-DSLAB\main.pdf (7 pages, 423647 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
  50797 words of extra memory for PDF output out of 51595 (max. 10000000)
 
