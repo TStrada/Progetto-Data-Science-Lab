@@ -38,7 +38,7 @@
 
 \author{
     Ruben Agazzi x\\
-	Fabrizio Cominetti x\\
+	Fabrizio Cominetti 882737\\
 	Davide Abete x\\
 	Tommaso Strada x\\
 	Alessandro Fasani x % Authors
@@ -61,10 +61,10 @@
   \begin{@twocolumnfalse}
     \maketitle
     \begin{abstract}
-      \noindent{L'obiettivo principale del progetto è quello di valutare e selezionare il miglior modello predittivo relativamente alle stime delle vendite di alcuni settori, precisamente Pesca, Calcio e x, di un attività di e-commerce.}\\
-      Il periodo preso in considerazione va dal giorno x al giorno x.\\
+      \noindent{L'obiettivo principale del progetto è quello di valutare e selezionare il miglior modello predittivo relativamente alle stime delle vendite di alcuni settori, precisamente Pesca, Calcio e Casual, di un attività di e-commerce.}\\
+      Il periodo preso in considerazione va dal giorno 01-01-2014 al giorno 31-12-2021.\\
       Per un attività commerciale presente sulla rete è di fondamentale importanza prevedere le vendite che saranno effettuate nei periodi successivi per ogni settore a disposizione, in modo tale da organizzare disponibilità di magazzino e di spedizione.\\
-      I dati sono stati modellati in funzione dell'obiettivo e aggregati secondo diverse granularità, ovvero con frequenza annuale, trimestrale, mensile e settimanale, in modo tale da valutare le performance dei modelli presi in considerazione.\\
+      I dati sono stati modellati in funzione dell'obiettivo e aggregati secondo diverse granularità, ovvero con frequenza annuale, trimestrale, e settimanale, in modo tale da valutare le performance dei modelli presi in considerazione.\\
       Come sarà possibile verificare nel proseguio del report, la granularità più efficace, relativamente agli obiettivi preposti dal progetto, è risultata quella x.\\
       Il progetto è stato effettuato prendendo in considerazione i tre settori con maggiore disponibilità effettiva di osservazioni, ma i modelli utilizzati possono essere applicati anche ad altri settori, per realizzare in questo modo una panoramica completo sull'intero e-commerce.
     \end{abstract}
@@ -152,18 +152,34 @@ I modelli ottenuti e i loro parametri sono i seguenti:
 	\item Settimanale casual: ARIMA model (1,0,0)(0,0,0)
 \end{itemize}
 \subsection*{TBATS}
-Il modello TBATS è in grado di considerare e lavorare con stagionalità multiple e complesse.
+Il modello TBATS è in grado di considerare e lavorare con stagionalità multiple e complesse.\\
+TBATS è l'acronimo di Trigonometric seasonality, Box-Cox transformation, ARMA errors, Trend and Seasonal components.\\
+In questo modello, ogni stagionalità è modellata su di una rappresentazione trigonometrica, basata sulla serie di Fourier. Uno dei principali vantaggi di questo approccio è che richiede solo due 'seed', indipendentemente dalla lunghezza del periodo. Un altro vantaggio è la possibilità di modellare effetti stagionali di lunghezza non intera. Ad esempio, data una serie di osservazioni giornaliere, è possibile modellare gli anni bisestili con una stagione di lunghezza 365,25.\\
+Il modello TBATS prende in considerazione varie alternative ed è in grado di adattarsi a diversi modelli. Prenderà in considerazione modelli con le seguenti caratteristiche:
+\begin{itemize}
+\item con e senza trasformazione Box-Cox
+\item con e senza Trend
+\item con e senza smorzamento del trend
+\item con e senza processo ARMA(p,q) utilizzato per modellare i residui
+\item modello non stagionale
+\item varie quantità di armoniche utilizzate per modellare gli effetti stagionali
+\end{itemize}
+Il modello finale sarà poi scelto utilizzando il criterio di informazione di Akaike (AIC).\\
+Nella figura sottostante possiamo osservare una formulazione matematica del modello in questione.
 
-\includegraphics{tbats.png}
-\\
-sopra img da dispensa, sotto da report\\
-\includegraphics{tbats2.png}
+\begin{figure}
+  \caption{Immagine da dispensa}
+  \begin{center}
+    \includegraphics{tbats.png}
+  \end{center}
+\end{figure}
 
-\begin{description}
-	\item[First] This is the first item
-	\item[Last] This is the last item
-\end{description}
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+\begin{figure}
+  \caption{Immagine da report}
+  \begin{center}
+    \includegraphics{tbats2.png}
+  \end{center}
+\end{figure}
 
 \subsection*{PROPHET}
 Prophet è invece una procedura dedita alla previsione di serie storiche basata su modelli addittivi, dove i trend non lineari sono analizzati con diverse stagionalità.\\
@@ -236,6 +252,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \section{Analisi Calcio}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
 
+\section{Analisi Casual}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+
 \section{Risultati}
 Al fine di valutare e selezionare il modello più indicato e preciso relativamente alle finalità del progetto, si è scelto di utilizzare una metrica, 'MAPE', in grado di tener conto anche dell'errore di previsione.\\
 Di seguito il MAPE (Mean Absolute Percentage Error), o errore percentuale medio assoluto, dal punto di vista teorico:\\
@@ -261,7 +280,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 			Modello & Pesca & Calcio & Casual \\
 		\midrule
 			ARIMA & 171.49\% & 261.70\% & 301.28\% \\
-			TBATS & X\% & X\% & X\% \\
+			TBATS & 28.6\% & 50.08\% & 28.32\% \\
 			PROPHET & X\% & X\% & X\% \\
 			XGBOOST & X\% & X\% & X\% \\
 		\bottomrule
@@ -278,7 +297,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 				Modello & Pesca & Calcio & Casual \\
 			\midrule
 				ARIMA & 319.69\% & 78.89\% & 327.05\% \\
-				TBATS & X\% & X\% & X\% \\
+				TBATS & 42.16\% & 39.5\% & 37.35\% \\
 				PROPHET & X\% & X\% & X\% \\
 				XGBOOST & X\% & X\% & X\% \\
 			\bottomrule
@@ -295,7 +314,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 					Modello & Pesca & Calcio & Casual \\
 				\midrule
 					ARIMA & 62.7\% & 111.44\% & 222.02\% \\
-					TBATS & X\% & X\% & X\% \\
+					TBATS & 47.09\% & 58.05\% & 33.92\% \\
 					PROPHET & X\% & X\% & X\% \\
 					XGBOOST & X\% & X\% & X\% \\
 				\bottomrule
@@ -312,7 +331,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 						Modello & Pesca & Calcio & Casual \\
 					\midrule
 						ARIMA & 31.87\% & 571.40\% & 145.57\% \\
-						TBATS & X\% & X\% & X\% \\
+						TBATS & 40.63\% & 159.13\% & 41.63\% \\
 						PROPHET & X\% & X\% & X\% \\
 						XGBOOST & X\% & X\% & X\% \\
 					\bottomrule

@@ -1,26 +1,15 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {italian}{}
-\babel@toc {italian}{}
-\babel@toc {italian}{}
-\defcounter {refsection}{0}\relax 
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Punti Principali}{2}{subsection.1.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Obiettivo}{2}{section.2}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Aspetti Metodologici}{3}{section.3}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Dati}{5}{section.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Manipolazione Dati}{5}{subsection.4.1}%
-\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Manipolazione Dati}{6}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Analisi Pesca}{6}{section.5}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Analisi Calcio}{6}{section.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Risultati}{6}{section.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Dashboard}{7}{section.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Conclusioni}{7}{section.9}%
+\contentsline {section}{\numberline {7}Analisi Casual}{6}{section.7}%
+\contentsline {section}{\numberline {8}Risultati}{7}{section.8}%
+\contentsline {section}{\numberline {9}Dashboard}{7}{section.9}%
+\contentsline {section}{\numberline {10}Conclusioni}{8}{section.10}%
