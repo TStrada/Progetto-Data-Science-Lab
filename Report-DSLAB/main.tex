@@ -157,40 +157,32 @@ sopra img da dispensa, sotto da report\\
 	\item[First] This is the first item
 	\item[Last] This is the last item
 \end{description}
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies.
 
 \subsection*{PROPHET}
-Prophet è invece una procedura dedita alla previsione di serie storiche basata su modelli addittivi, dove i trend non lineari sono analizzati con diverse stagionalità.\\
-Il modello decompone la serie storica in trend, stagionalità e festività.
+Prophet è un modello dedito alla previsione di serie storiche basata su modelli additivi, dove i trend non lineari sono analizzati con diverse stagionalità. Il modello decompone la serie storica in trend, stagionalità ed effetti di festività. 
 
 \begin{description}
 	\item[First] This is the first item
 	\item[Last] This is the last item
 \end{description}
-Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects.\\
-It works best with time series that have strong seasonal effects and several seasons of historical data. Prophet is robust to missing data and shifts in the trend, and typically handles outliers well.\\
-The procedure makes use of a decomposable time series model with three main model components: trend, seasonality, and holidays.\\
-Similar to a generalized additive model (GAM), with time as a regressor, Prophet fits several linear and non-linear functions of time as components.\\ In its simplest form:
+Può essere quindi considerato un modello di regressione non lineare, della forma:
 \\
 $y(t) = g(t) + s(t) + h(t) + e(t)$
 \\
 dove:
 \begin{description}
-	\item[g(t)] trend models non-periodic changes (i.e. growth over time)
-	\item[s(t)] seasonality presents periodic changes (i.e. weekly, monthly, yearly)
-	\item[h(t)] ties in effects of holidays (on potentially irregular schedules $\geq$ 1 day(s))
-	\item[e(t)] covers idiosyncratic changes not accommodated by the model
+	\item[g(t)] descrive una tendenza a tratti lineare delle variazioni non periodiche nei dati delle serie temporali (o termine di crescita)
+	\item[s(t)] indica i vari modelli stagionali generati dai cambiamenti periodici come la stagionalità giornaliera, settimanale o annuale
+	\item[h(t)] rappresenta gli effetti festivi che si possono verificare su cadenze irregolari, ad esempio su un giorno o su un periodo di più giorni
+	\item[e(t)] sono termini di errore, ciò che non viene spiegato dal modello
 \end{description}
 \cite{mathprophet}\cite{fbprophet}
 \\
-In other words, the procedure's equation can be written:
+In altri termini l’equazione può essere così scritta:
 \includegraphics[width=75mm,scale=0.5]{prophet.png}
 \\
-Prophet is essentially “framing the forecasting problem as a curve-fitting exercise” rather than looking explicitly at the time based dependence of each observation.\\
-The procedure provides two possible trend models for g(t), “a saturating growth model, and a piecewise linear model.”\\
-The seasonal component s(t) provides a adaptability to the model by allowing periodic changes based on sub-daily, daily, weekly and yearly seasonality.\\
-Prophet relies on Fourier series to provide a malleable model of periodic effects. P is the regular period the time series will have (e.g. P = 365.25 for yearly data or P = 7 for weekly data, when time is scaled in days).\\
-Impact of a particular holiday on the time series is often similar year after year, making it an important incorporation into the forecast. The component h(t) speaks for predictable events of the year including those on irregular schedules (e.g. Black Friday or the Superbowl). To utilize this feature, the user needs to provide a custom list of events. Fusing this list of holidays into the model is made straightforward by assuming that the effects of holidays are independent.\\
+Il modello Prophet prevede due possibili modelli di tendenze per la componente g(t), un modello di crescita saturante e un modello lineare a tratti. La componente stagionale s(t) fornisce adattabilità al modello consentendo periodiche modifiche basate su cambiamenti della stagionalità infragiornaliere, giornaliere, settimanali e annuali. Questa componente per impostazione predefinita, prevede l'utilizzo dell’ordine 10 per la stagionalità annuale e l'ordine 3 per quella settimanale. La componente h(t) considera eventi prevedibili dell'anno, ad esempio  il Venerdì nero, il Superbowl o Natale. Per utilizzare questa funzione, l'utente deve fornire un elenco personalizzato di eventi festivi e l’incorporazione di questa lista nel modello è fatta supponendo che gli effetti delle vacanze siano indipendenti. Il modello viene stimato utilizzando un approccio bayesiano per consentire la selezione automatica dei change points e di altri parametri del modello, se non esplicitamente specificati. Date le sue caratteristiche performa meglio con le serie temporali che hanno forti effetti stagionali e numerose stagioni di dati storici. Il modello è caratterizzato da diversi vantaggi: è preciso e veloce, per questo viene utilizzato ad esempio in molte applicazioni su Facebook per produrre previsioni affidabili per la pianificazione e la definizione degli obiettivi, completamente automatico, in quanto fornisce una previsione ragionevole su dati disordinati senza sforzo manuale, genera previsioni adattabili fornendo molte possibilità agli utenti di modificare e regolare le previsioni al fine di migliorarle, gestisce bene le variazioni stagionali, ed infine, è robusto nei confronti dei valori anomali e resiliente ai dati mancanti.\\
 
 \subsection*{XGBOOST}
 XGBoost is an efficient implementation of gradient boosting for classification and regression problems.\\
