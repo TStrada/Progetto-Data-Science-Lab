@@ -71,6 +71,28 @@
       \verb https://machinelearningmastery.com/xgboost-for-time-series-forecasting/
       \endverb
     \endentry
+    \entry{dispensa}{book}{}
+      \name{author}{1}{}{%
+        {{hash=45a9b1cdb492ac173f12ebb6c4a04d8b}{%
+           family={Fattore},
+           familyi={F\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{45a9b1cdb492ac173f12ebb6c4a04d8b}
+      \strng{fullhash}{45a9b1cdb492ac173f12ebb6c4a04d8b}
+      \strng{bibnamehash}{45a9b1cdb492ac173f12ebb6c4a04d8b}
+      \strng{authorbibnamehash}{45a9b1cdb492ac173f12ebb6c4a04d8b}
+      \strng{authornamehash}{45a9b1cdb492ac173f12ebb6c4a04d8b}
+      \strng{authorfullhash}{45a9b1cdb492ac173f12ebb6c4a04d8b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of time series analysis, for the working data scientist}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
     \entry{mathprophet}{online}{}
       \name{author}{1}{}{%
         {{hash=d4e874d1cfd5e78a0d4cc143cce9e09f}{%
@@ -95,6 +117,32 @@
       \endverb
       \verb{url}
       \verb https://medium.com/future-vision/the-math-of-prophet-46864fa9c55a
+      \endverb
+    \endentry
+    \entry{tbats}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ee087ff6f81f2080c714753cafa26a5a}{%
+           family={Skorupa},
+           familyi={S\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee087ff6f81f2080c714753cafa26a5a}
+      \strng{fullhash}{ee087ff6f81f2080c714753cafa26a5a}
+      \strng{bibnamehash}{ee087ff6f81f2080c714753cafa26a5a}
+      \strng{authorbibnamehash}{ee087ff6f81f2080c714753cafa26a5a}
+      \strng{authornamehash}{ee087ff6f81f2080c714753cafa26a5a}
+      \strng{authorfullhash}{ee087ff6f81f2080c714753cafa26a5a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Forecasting Time Series with Multiple Seasonalities using TBATS in Python}
+      \verb{urlraw}
+      \verb https://medium.com/intive-developers/forecasting-time-series-with-multiple-seasonalities-using-tbats-in-python-398a00ac0e8a
+      \endverb
+      \verb{url}
+      \verb https://medium.com/intive-developers/forecasting-time-series-with-multiple-seasonalities-using-tbats-in-python-398a00ac0e8a
       \endverb
     \endentry
   \enddatalist

@@ -1208,6 +1208,7 @@ INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\vf\public\xcharter\XCharter1-R
 INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter1-Roman-ts1--base.tfm
 INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\vf\public\xcharter\XCharter-Roman-tlf-t1.vf
 INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter-Roman-tlf-t1--base.tfm
+INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter-Italic-tlf-t1.tfm
 INPUT .\Immagini\\tbats.png
 INPUT .\Immagini\\tbats.png
 INPUT Immagini\\tbats.png
@@ -1229,6 +1230,8 @@ INPUT .\Immagini\\prophet.png
 INPUT .\Immagini\\prophet.png
 INPUT .\Immagini\\prophet.png
 INPUT .\Immagini\\prophet.png
+INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\vf\public\xcharter\XCharter-Italic-tlf-t1.vf
+INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter-Italic-tlf-t1--base.tfm
 INPUT .\Immagini\\mape.png
 INPUT .\Immagini\\mape.png
 INPUT Immagini\\mape.png
@@ -1236,9 +1239,6 @@ INPUT .\Immagini\\mape.png
 INPUT .\Immagini\\mape.png
 INPUT .\Immagini\\mape.png
 INPUT .\Immagini\\mape.png
-INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter-Italic-tlf-t1.tfm
-INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\vf\public\xcharter\XCharter-Italic-tlf-t1.vf
-INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter-Italic-tlf-t1--base.tfm
 INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\tfm\public\xcharter\XCharter-Roman-tlf-sc-t1.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
 INPUT C:\Users\Ruben\AppData\Roaming\MiKTeX\fonts\vf\public\xcharter\XCharter-Roman-tlf-sc-t1.vf
