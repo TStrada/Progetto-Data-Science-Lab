@@ -244,15 +244,33 @@ Il file iniziale è composto da un totale di 25262 righe e dalle 3 colonne descr
 Durante la fase iniziale di esplorazione dei dati, abbiamo notato la presenza di molti valori mancanti all'interno del dataset; in particolare la maggior parte di questi valori appartenevano all'anno 2013. In questo caso abbiamo deciso di rimuovere completamente l'anno in questione in modo da avere dati continui sugli anni precedenti, evitando di allenare i modelli su dati frammentati e incompleti.
 \subsection{Aggreazione dei dati}
 Una volta rimossi i valori precedenti abbiamo raggruppato i dati per i 3 settori di vendita scelti, ovvero pesca, calcio e casual. In seguito i vari dataset già raggruppati per settori sono stati ulteriormente raggruppati in base a diversi periodi di tempo, in modo da avere una granularità dei dati più varia. In particolare sono stati creati dataset relativi alle vendite settimanali, mensili, trimestrali e annuali.
+\section{Analisi per settore}
+Ora seguirà una breve analisi dei risultati, divisa per settore di vendita, in particolare indicheremo il modello migliore ottenuto per lo specifico settore di vendita. In seguito presenteremo i risultati completi
+\subsection{Analisi Pesca}
+Nel contesto degli algoritmi usati per il settore di vendita "Pesca", al netto dei raggruppamenti, il modello che ha avuto risultati migliori è "modello", in particolare applicato su un raggruppamento "raggruppamento" dei dati. Il modello in questione ha avuto un MAPE(Mean Absolute Percentage Error) pari a "perc".
+\begin{figure}
+  \caption{}
+  \begin{center}
+    \includegraphics[width=75mm,scale=0.5]{prophet.png}
+  \end{center}
+\end{figure}
 
-\section{Analisi Pesca}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-
-\section{Analisi Calcio}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-
-\section{Analisi Casual}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+\subsection{Analisi Calcio}
+Per quanto riguarda ai dati relativi al settore di vendita "Calcio", il modello migliore che trovato è stato "modello" con un Mean Percentage Error pari a "perc". Questo modello inoltre è stato applicato ai dati raggruppati "raggruppamento"
+\begin{figure}
+  \caption{}
+  \begin{center}
+    \includegraphics[width=75mm,scale=0.5]{prophet.png}
+  \end{center}
+\end{figure}
+\subsection{Analisi Casual}
+Infine, per quanto riguarda il settore di vendite Casual, il modello che ha ottenuto risultati migliori è "modello" applicato ai dati raggruppati "raggruppanto". Il MAPE ottenuto da questo modello è pari a "perc"
+\begin{figure}
+  \caption{}
+  \begin{center}
+    \includegraphics[width=75mm,scale=0.5]{prophet.png}
+  \end{center}
+\end{figure}
 
 \section{Risultati}
 Al fine di valutare e selezionare il modello più indicato e preciso relativamente alle finalità del progetto, si è scelto di utilizzare una metrica, 'MAPE', in grado di tener conto anche dell'errore di previsione.\\
@@ -339,7 +357,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 
 
 \section{Conclusioni}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+In conclusione abbiamo notato che il modello più performante ottenuto è "modello" applicato ai dati del settore "settore" raggruppati "raggruppamento". D'altro canto il modello che ha avuto la peggiore performance è il modello SARIMA applicato al settore casual con raggruppamento dei dati mensile. Alcuni ulteriori sviluppi potrebbero consistere nel test di altri algoritmi per la previsione di serie storiche, magari utilizzando anche tecniche di deep learning.
 
 \begin{align}
 	A = 

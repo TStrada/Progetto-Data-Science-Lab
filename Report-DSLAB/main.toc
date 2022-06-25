@@ -25,12 +25,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Aggreazione dei dati}{6}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Analisi Pesca}{6}{section.5}%
+\contentsline {section}{\numberline {5}Analisi per settore}{6}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Analisi Calcio}{6}{section.6}%
+\contentsline {subsection}{\numberline {5.1}Analisi Pesca}{6}{subsection.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Analisi Casual}{7}{section.7}%
+\contentsline {subsection}{\numberline {5.2}Analisi Calcio}{6}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Risultati}{7}{section.8}%
+\contentsline {subsection}{\numberline {5.3}Analisi Casual}{7}{subsection.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Conclusioni}{8}{section.9}%
+\contentsline {section}{\numberline {6}Risultati}{7}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Conclusioni}{8}{section.7}%
