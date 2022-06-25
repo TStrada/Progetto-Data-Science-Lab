@@ -212,12 +212,11 @@ In altri termini l’equazione può essere così scritta:
 Il modello Prophet prevede due possibili modelli di tendenze per la componente g(t), un modello di crescita saturante e un modello lineare a tratti. La componente stagionale s(t) fornisce adattabilità al modello consentendo periodiche modifiche basate su cambiamenti della stagionalità infragiornaliere, giornaliere, settimanali e annuali. Questa componente per impostazione predefinita, prevede l'utilizzo dell’ordine 10 per la stagionalità annuale e l'ordine 3 per quella settimanale. La componente h(t) considera eventi prevedibili dell'anno, ad esempio  il Venerdì nero, il Superbowl o Natale. Per utilizzare questa funzione, l'utente deve fornire un elenco personalizzato di eventi festivi e l’incorporazione di questa lista nel modello è fatta supponendo che gli effetti delle vacanze siano indipendenti. Il modello viene stimato utilizzando un approccio bayesiano per consentire la selezione automatica dei change points e di altri parametri del modello, se non esplicitamente specificati. Date le sue caratteristiche performa meglio con le serie temporali che hanno forti effetti stagionali e numerose stagioni di dati storici. Il modello è caratterizzato da diversi vantaggi: è preciso e veloce, per questo viene utilizzato ad esempio in molte applicazioni su Facebook per produrre previsioni affidabili per la pianificazione e la definizione degli obiettivi, completamente automatico, in quanto fornisce una previsione ragionevole su dati disordinati senza sforzo manuale, genera previsioni adattabili fornendo molte possibilità agli utenti di modificare e regolare le previsioni al fine di migliorarle, gestisce bene le variazioni stagionali, ed infine, è robusto nei confronti dei valori anomali e resiliente ai dati mancanti.\\
 
 \subsection{XGBOOST}
-XGBoost is an efficient implementation of gradient boosting for classification and regression problems.\\
-XGBoost can also be used for time series forecasting, although it requires that the time series dataset be transformed into a supervised learning problem first. It also requires the use of a specialized technique for evaluating the model called walk-forward validation, as evaluating the model using k-fold cross validation would result in optimistically biased results.\\
+L'algoritmo XgBoost è un implementazione del gradient Boosted Decision Tree utilizzato il larga parte per problemi di classificazione e regressione.\\ Sebbene si nativamente adottato per il ML questo può altresì essere utilizzato per il time series forecasting previa una trasformazione del dataset in un problema di apprendimento supervisionato (dati di input e label). L'XGBRegressor utilizza un numero di Gradient Boosted Tree (riferito al parametro n_estimators nel modello) per predire il valore della variabile dipendente. \\
+Nella previsione di una time series il modello utilizza uno step di lookback (nel codice indicato come shift_giornaliro, shift_mensile etc.) per prevedere un numero di step nel futuro. La logica alla base di questo shift temporale utilizzato come variabile di input è applicare un fattore di possibile stagionalità delle vendite. Per esempio nell'aggregazione settimanale può essere usata la settimana precedente come varibile di input o la stessa settimana dell'anno prima. \\
+Inoltre, sempre data la sua funzione nativa nel ML, non è possibile utilizzare parametri che randomizzino il dataset (come un k-fold) durante la valutazione in quanto si perderebbe la funzione intrinseca della serie temporale. Per ovviare a questo problema si opta per un metodo statico di divisione del dataset (80/20) .\\
 \\
-XGBRegressor uses a number of gradient boosted trees (referred to as n\_estimators in the model) to predict the value of a dependent variable. This is done through combining decision trees (which individually are weak learners) to form a combined strong learner.\\
-When forecasting a time series, the model uses what is known as a lookback period to forecast for a number of steps forward. For instance, if a lookback period of 1 is used, then the X\_train (or independent variable) uses lagged values of the time series regressed against the time series at time t (Y\_train) in order to forecast future values.\\
-\cite{xgboost}
+
 
 \begin{description}
 	\item[First] This is the first item
@@ -299,7 +298,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 			ARIMA & 31.75\% & 28.5\% & 31.74\% \\
 			TBATS & 28.6\% & 50.08\% & 28.32\% \\
 			PROPHET & 36.88\% & 97.64\% & 36.88\% \\
-			XGBOOST & X\% & X\% & X\% \\
+			XGBOOST & 4.30\% & 8.33\% & 14.63\% \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -316,7 +315,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 				ARIMA & 28.67\% & 80.68\% & 73.66\% \\
 				TBATS & 42.16\% & 39.5\% & 37.35\% \\
 				PROPHET & 45.87\% & 86.19\% & 63.67\% \\
-				XGBOOST & X\% & X\% & X\% \\
+				XGBOOST & 13.08\% & 48.01\% & 15.87\% \\
 			\bottomrule
 		\end{tabular}
 	\end{table}
@@ -333,7 +332,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 					ARIMA & 33.60\% & 116.59\% &234.71\% \\
 					TBATS & 47.09\% & 58.05\% & 33.92\% \\
 					PROPHET & 12.86\% & 106.61\% & 22.88\% \\
-					XGBOOST & X\% & X\% & X\% \\
+					XGBOOST & 15.87\% & 40.19\% & 32.49\% \\
 				\bottomrule
 			\end{tabular}
 		\end{table}
@@ -350,7 +349,7 @@ Illustriamo di seguito i valori della metrica considerata per ciascuno dei model
 						ARIMA & 71.09\% & 111.99\% & 118.32\% \\
 						TBATS & 40.63\% & 159.13\% & 41.63\% \\
 						PROPHET & 18.97\% & 19.07\% & 57.51\% \\
-						XGBOOST & X\% & X\% & X\% \\
+						XGBOOST & 17.86\% & 47.44\% & 44.81\% \\
 					\bottomrule
 				\end{tabular}
 			\end{table}
