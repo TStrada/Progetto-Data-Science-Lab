@@ -33,6 +33,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8}Risultati}{7}{section.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Dashboard}{8}{section.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Conclusioni}{8}{section.10}%
+\contentsline {section}{\numberline {9}Conclusioni}{8}{section.9}%
