@@ -231,7 +231,7 @@ I dati a disposizione coprono il periodo compreso tra il 2 febbraio 2013 e l'8 a
 Il file iniziale è composto da un totale di 25262 righe e dalle 3 colonne descritte sopra.
 
 \subsection{Manipolazione Dati}
-Durante la fase iniziale di esplorazione dei dati, abbiamo notato la presenza di molti valori mancanti all'interno del dataset; in particolare la maggior parte di questi valori appartenevano all'anno 2013. In questo caso abbiamo deciso di rimuovere completamente l'anno in questione in modo da avere dati continui sugli anni precedenti, evitando di allenare i modelli su dati frammentati e incompleti.\\
+Durante la fase iniziale di esplorazione dei dati, abbiamo notato la presenza di molti valori mancanti all'interno del dataset, in particolare la maggior parte di questi valori appartenevano all'anno 2013. In questo caso abbiamo deciso di rimuovere completamente l'anno in questione in modo da avere dati continui sugli anni precedenti, evitando di allenare i modelli su dati frammentati e incompleti.\\
 Si è infine scelto di escludere i valori con anno 2022 dal progetto, in quanto incompleti e non utili a raggiungere gli obiettivi prefissati.
 \begin{figure}[H]
   \caption{Plot serie storiche per settore}
@@ -265,10 +265,10 @@ Nel contesto degli algoritmi usati per il settore di vendita "Pesca", al netto d
   \end{center}
 \end{figure}
 
-Per quanto riguarda invece i risultati con aggregazione trimestrale, è sempre XGBoost ad ottenere la migliore previsione, così come nel caso di aggregazione settimanale. Il discorso cambia invece con aggregazione mensile, dove è il modello Prophet ad ottenere la migliore precisione. Il settore pesca è quello con cui si ottengono i migliori risultati rispetto agli altri settori.
+Per quanto riguarda invece i risultati con aggregazione trimestrale, è sempre XGBoost ad ottenere la migliore previsione, così come nel caso di aggregazione settimanale. Il discorso cambia invece con aggregazione mensile, dove è il modello Prophet ad ottenere la migliore precisione. Il settore pesca è quello in cui si ottengono i migliori risultati rispetto agli altri settori.
 
 \subsection{Analisi Calcio}
-Per quanto riguarda ai dati relativi al settore di vendita "Calcio", il modello migliore tra quelli utilizzati è 'XGBoost' con un Mean Percentage Error pari a 8.33\%. Questo modello inoltre ottiene un buon punteggio anche quando applicato ai dati aggregati settimanalmente, con modello Prophet - come osservabile nell'immagine sottostante.
+Per quanto riguarda i dati relativi al settore di vendita "Calcio", il modello migliore tra quelli utilizzati è 'XGBoost' con un Mean Percentage Error pari a 8.33\%. Questo modello inoltre ottiene un buon punteggio anche quando applicato ai dati aggregati settimanalmente, con modello Prophet - come osservabile nell'immagine sottostante.
 \begin{figure}[H]
   \caption{Prophet Calcio Settimanale}
   \begin{center}
