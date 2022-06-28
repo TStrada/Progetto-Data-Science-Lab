@@ -64,6 +64,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{How to Use XGBoost for Time Series Forecasting}
+      \true{nocite}
       \verb{urlraw}
       \verb https://machinelearningmastery.com/xgboost-for-time-series-forecasting/
       \endverb
@@ -91,7 +92,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Fundamentals of time series analysis, for the working data scientist}
       \field{year}{2022}
-      \true{nocite}
     \endentry
     \entry{mathprophet}{online}{}
       \name{author}{1}{}{%
